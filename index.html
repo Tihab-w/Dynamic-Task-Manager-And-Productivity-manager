@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskFlow - Vanilla JS</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <h1>📋 TaskFlow</h1>
+      <p class="subhead">Vanilla JS · Modular · localStorage</p>
+    </header>
+
+    <form class="task-form" id="taskForm">
+      <input type="text" id="taskTitleInput" placeholder="Add a new task..." required>
+      <select id="taskCategorySelect">
+        <option value="Work">💼 Work</option>
+        <option value="Personal">🏠 Personal</option>
+        <option value="Study">📚 Study</option>
+        <option value="Health">💪 Health</option>
+      </select>
+      <input type="date" id="taskDueDate">
+      <button type="submit">➕ Add</button>
+    </form>
+
+    <div class="toolbar">
+      <div class="filters" id="filterContainer">
+        <button type="button" data-filter="all" class="active">All</button>
+        <button type="button" data-filter="active">Active</button>
+        <button type="button" data-filter="completed">Completed</button>
+      </div>
+      <input type="search" id="searchInput" placeholder="🔍 Search tasks...">
+    </div>
+
+    <div id="taskListContainer" class="task-list"></div>
+  </div>
+
+  <script src="storage.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
